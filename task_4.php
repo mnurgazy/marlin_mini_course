@@ -34,7 +34,7 @@
                         $items = [
                             [
                                 "title" => "My Tasks",
-                                "inline_block" => "130 / 500",
+                                "value" => "130 / 500",
                                 "progress_bar" => "bg-fusion-400",
                                 "style" => "65%",
                                 "valuenow" => "65",
@@ -43,7 +43,7 @@
                             ],
                             [
                                 "title" => "Transfered",
-                                "inline_block" => "440 TB",
+                                "value" => "440 TB",
                                 "progress_bar" => "bg-success-500",
                                 "style" => "34%",
                                 "valuenow" => "34",
@@ -52,7 +52,7 @@
                             ],
                             [
                                 "title" => "Bugs Squashed",
-                                "inline_block" => "77%",
+                                "value" => "77%",
                                 "progress_bar" => "bg-info-400",
                                 "style" => "77%",
                                 "valuenow" => "77",
@@ -61,7 +61,7 @@
                             ],
                             [
                                 "title" => "User Testing",
-                                "inline_block" => "7 days",
+                                "value" => "7 days",
                                 "progress_bar" => "bg-primary-300",
                                 "style" => "84%",
                                 "valuenow" => "84",
