@@ -78,7 +78,7 @@
                                     <span class="d-inline-block ml-auto"><?php echo $item['value'];?></span>
                                 </div>                            
                                 <div class="progress progress-sm mb-3">
-                                    <div class="progress-bar <?php echo $item['bg'];?>" role="progressbar" style="width: <?php echo $item['style'];?>" aria-valuenow="<?php echo $item['valuenow'];?>" aria-valuemin="<?php echo $item['valuemin'];?>" aria-valuemax="<?php echo $item['valuemax'];?>"></div>
+                                    <div class="progress-bar <?php echo $item['bg'];?>" role="progressbar" style="width: <?php echo $item['style'];?>;" aria-valuenow="<?php echo $item['valuenow'];?>" aria-valuemin="<?php echo $item['valuemin'];?>" aria-valuemax="<?php echo $item['valuemax'];?>"></div>
                                 </div>
                             <?php endforeach;?>
                         </div>
