@@ -35,7 +35,7 @@
                             [
                                 "title" => "My Tasks",
                                 "value" => "130 / 500",
-                                "progress_bar" => "bg-fusion-400",
+                                "bg" => "bg-fusion-400",
                                 "style" => "65%",
                                 "valuenow" => "65",
                                 "valuemin" => "0",
@@ -44,7 +44,7 @@
                             [
                                 "title" => "Transfered",
                                 "value" => "440 TB",
-                                "progress_bar" => "bg-success-500",
+                                "bg" => "bg-success-500",
                                 "style" => "34%",
                                 "valuenow" => "34",
                                 "valuemin" => "0",
@@ -53,7 +53,7 @@
                             [
                                 "title" => "Bugs Squashed",
                                 "value" => "77%",
-                                "progress_bar" => "bg-info-400",
+                                "bg" => "bg-info-400",
                                 "style" => "77%",
                                 "valuenow" => "77",
                                 "valuemin" => "0",
@@ -62,7 +62,7 @@
                             [
                                 "title" => "User Testing",
                                 "value" => "7 days",
-                                "progress_bar" => "bg-primary-300",
+                                "bg" => "bg-primary-300",
                                 "style" => "84%",
                                 "valuenow" => "84",
                                 "valuemin" => "0",
@@ -75,10 +75,10 @@
                             <?php foreach ($items as $item):?>
                                 <div class="d-flex mt-2">
                                     <?php echo $item['title'];?>
-                                    <span class="d-inline-block ml-auto"><?php echo $item['inline_block'];?></span>
+                                    <span class="d-inline-block ml-auto"><?php echo $item['value'];?></span>
                                 </div>                            
                                 <div class="progress progress-sm mb-3">
-                                    <div class="progress-bar <?php echo $item['progress_bar'];?>" role="progressbar" style="width: <?php echo $item['style'];?>" aria-valuenow="<?php echo $item['valuenow'];?>" aria-valuemin="<?php echo $item['valuemin'];?>" aria-valuemax="<?php echo $item['valuemax'];?>"></div>
+                                    <div class="progress-bar <?php echo $item['bg'];?>" role="progressbar" style="width: <?php echo $item['style'];?>" aria-valuenow="<?php echo $item['valuenow'];?>" aria-valuemin="<?php echo $item['valuemin'];?>" aria-valuemax="<?php echo $item['valuemax'];?>"></div>
                                 </div>
                             <?php endforeach;?>
                         </div>
