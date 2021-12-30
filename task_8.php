@@ -61,7 +61,7 @@
                                             <td><?php echo $user['last_name'];?></td>
                                             <td><?php echo $user['username'];?></td>
                                             <td>
-                                                <a href="show.php?id=<?php echo $user['id'];?>" class="btn btn-info">Редактировать</a>
+                                                <a href="show.php?id=<?php echo $user['id'];?>" class="btn btn-info">Просмотреть</a>
                                                 <a href="edit.php?id=<?php echo $user['id'];?>" class="btn btn-warning">Изменить</a>
                                                 <a href="delete.php?id=<?php echo $user['id'];?>" class="btn btn-danger">Удалить</a>
                                             </td>
