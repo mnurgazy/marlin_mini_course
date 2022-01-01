@@ -5,4 +5,4 @@ session_start();
 session_unset();
 session_destroy();
 
-header("Location: task_15.php");
+header("Location: task_14.php");
