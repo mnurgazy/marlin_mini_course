@@ -39,7 +39,7 @@
                                         echo $_SESSION['success'];
                                         unset($_SESSION['success']);
                                     }?>                                    
-                                    <a href="task_14_1_handler.php" class="btn btn-info">Выйти</a>
+                                    <a href="task_15_handler.php" class="btn btn-info">Выйти</a>
                                 </div>
                             </div>
                         </div>
