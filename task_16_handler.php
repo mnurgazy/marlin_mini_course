@@ -1,0 +1,20 @@
+<?php 
+$image = $_FILES['image'];
+
+$ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+$name = uniqid() . "." . $ext;
+$path = "img/demo/gallery/";
+move_uploaded_file($image['tmp_name'], $path . $name);
+$imagelink = $path . $name;
+
+if (empty($image['name'])) {
+	header("Location: /task_16.php");
+	exit;
+}
+$pdo = new PDO ("mysql:host=localhost;dbname=my_project", "root", "");
+
+$sql = "INSERT INTO images (image) VALUES ('$imagelink')";
+$statement = $pdo->prepare($sql);
+$statement->execute();
+
+header("Location: /task_16.php");
