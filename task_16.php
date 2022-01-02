@@ -1,9 +1,6 @@
 <?php
-    $pdo = new PDO ("mysql:host=localhost;dbname=my_project", "root", "");
-    $sql = "SELECT * FROM images";
-    $statement = $pdo->prepare($sql);
-    $statement->execute();
-    $images = $statement->fetchALL(PDO::FETCH_ASSOC);
+   require "task_16_handler.php";
+   $images = get_images(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +39,7 @@
                             <div class="panel-content">
                                 <div class="panel-content">
                                     <div class="form-group">
-                                        <form action="task_16_handler.php" method="POST" enctype="multipart/form-data">
+                                        <form action="task_16_upload.php" method="POST" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <label class="form-label" for="simpleinput">Image</label>
                                             <input type="file" id="simpleinput" class="form-control" name="image">
