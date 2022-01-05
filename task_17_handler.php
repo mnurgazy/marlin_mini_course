@@ -24,6 +24,11 @@ function upload_image ($image) {
 	$path = "img/demo/gallery/";
 	move_uploaded_file($image['tmp_name'], $path . $name);
 	$imagelink = $path . $name;
+	
+	if (empty($image['name'])) {
+		header("Location: /task_17.php");
+		exit;
+	}
 
 	$pdo = new PDO ("mysql:host=localhost;dbname=my_project", "root", "");
 
