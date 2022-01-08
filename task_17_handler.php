@@ -51,3 +51,7 @@ function delete_image ($image_id) {
 		unlink($path);
 
 }
+
+
+
+
