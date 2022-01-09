@@ -18,25 +18,24 @@ function get_image_by_id ($image_id) {
     return $images;
 }
 
-function upload_image ($image) {
-	$total_files = count($image['name']);	//Подсчитывает количество элементов массива
-		for ($key=0; $key < $total_files; $key++) { 		//Запускаем цикл
-				$ext = pathinfo($image['name'][$key], PATHINFO_EXTENSION);
-					if (empty($ext)) {
-						header("Location: /task_18.php");
-						exit;
-					}
-				$name = uniqid() . "." . $ext;
-				$path = "img/demo/gallery/";
-				move_uploaded_file($image['tmp_name'][$key], $path . $name);
-				$imagelink = $path . $name;
+function upload_image ($image_name, $tmp_name) {
+	$ext = pathinfo($image_name, PATHINFO_EXTENSION);
 
-				$pdo = new PDO ("mysql:host=localhost;dbname=my_project", "root", "");
-
-				$sql = "INSERT INTO images (image) VALUES ('$imagelink')";
-				$statement = $pdo->prepare($sql);
-				$statement->execute();
+		if (empty($ext)) {
+			header("Location: /task_18.php");
+			exit;
 		}
+		
+	$name = uniqid() . "." . $ext;
+	$path = "img/demo/gallery/";
+	move_uploaded_file($tmp_name, $path . $name);
+	$imagelink = $path . $name;
+
+	$pdo = new PDO ("mysql:host=localhost;dbname=my_project", "root", "");
+
+	$sql = "INSERT INTO images (image) VALUES ('$imagelink')";
+	$statement = $pdo->prepare($sql);
+	$statement->execute();
 }
 
 function delete_image ($image_id) {
@@ -52,7 +51,3 @@ function delete_image ($image_id) {
 		unlink($path);
 
 }
-
-
-
-
